@@ -3,10 +3,11 @@
         <div class="card-body">
             <div class="row" style="margin-bottom: .7rem;">
                 <div class="col-md-4">
-                    <button class="btn btn-sm btn-link" type="button"><i class="fa fa-plus"></i> Create</button>
+                    <button class="btn btn-sm btn-link" type="button" (click)="detailsModalOpen(detailsModal)"><i
+                            class="fa fa-plus"></i> Create</button>
                 </div>
                 <div class="col-md-4">
-                    
+
                 </div>
                 <div class="col-md-4">
                     <div class="input-group">
@@ -50,3 +51,93 @@
         </div>
     </div>
 </div>
+
+<ng-template #detailsModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Property Master Data</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Property Code</label>
+                    <input type="text" class="form-control" placeholder="Code" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Property Name</label>
+                    <input type="text" class="form-control" placeholder="Name" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Cash Value</label>
+                    <input type="number" class="form-control" placeholder="Value" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Property Type</label>
+                    <select class="form-control">
+                        <option>Condo</option>
+                        <option>House and Lot</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Project</label>
+                    <select class="form-control" (change)="projectSelectChangeEvent($event.target.value,projectModal)">
+                        <option value="Camella">Camella</option>
+                        <option value="Azure">Azure</option>
+                        <option value="New">Define New</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Location</label>
+                    <select class="form-control">
+                        <option>Bicutan</option>
+                        <option>Lucena</option>
+                        <option>Define New</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="file">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Save</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #projectModal let-modal>
+    <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <table class="table table-sm table-bordered">
+            <thead>
+                <tr>
+                    <th width="2%">#</th>
+                    <td>Project Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Camella</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Azure</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-template>

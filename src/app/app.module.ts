@@ -39,7 +39,12 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+
+// PIMS COMPONENT
 import { PropertyManagementComponent } from './views/property-management/property-management.component';
+
+// ng bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -54,7 +59,8 @@ import { PropertyManagementComponent } from './views/property-management/propert
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
@@ -66,6 +72,6 @@ import { PropertyManagementComponent } from './views/property-management/propert
     PropertyManagementComponent
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

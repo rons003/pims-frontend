@@ -19,7 +19,7 @@ export class PropertyManagementComponent implements OnInit {
   }
 
   projectModalOpen(content: any) {
-    this.modalService.open(content, { size: 'sm' });
+    this.modalService.open(content);
   }
 
   projectSelectChangeEvent(value: string, content?: any) {

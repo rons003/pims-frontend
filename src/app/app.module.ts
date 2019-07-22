@@ -45,6 +45,7 @@ import { PropertyManagementComponent } from './views/property-management/propert
 
 // ng bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccountComponent } from './views/account/account.component';
 
 @NgModule({
   imports: [
@@ -69,7 +70,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    PropertyManagementComponent
+    PropertyManagementComponent,
+    AccountComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

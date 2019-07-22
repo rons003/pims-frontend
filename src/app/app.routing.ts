@@ -9,6 +9,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { PropertyManagementComponent } from './views/property-management/property-management.component';
+import { AccountComponent } from './views/account/account.component';
 
 export const routes: Routes = [
   {
@@ -56,6 +57,13 @@ export const routes: Routes = [
         component: PropertyManagementComponent,
         data: {
           title: 'Property Management'
+        }
+      },
+      {
+        path: 'accounts',
+        component: AccountComponent,
+        data: {
+          title: 'Account Management'
         }
       },
       {

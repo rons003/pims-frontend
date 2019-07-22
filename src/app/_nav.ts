@@ -50,7 +50,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Accounts',
-    url: '/theme/typography',
+    url: '/accounts',
     icon: 'cui-user icons'
   }
 ];
